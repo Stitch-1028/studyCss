@@ -22,7 +22,7 @@
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
-    transition: 0.5s;
+    transition: 1s;
   }
   
   .darkMode .box{

@@ -1,0 +1,91 @@
+*{
+  /* 初始化 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body{
+  /* 默认最小高度：2屏 */
+  min-height: 200vh;
+  background-color: #000;
+}
+header{
+  /* 固定定位 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* 弹性布局 */
+  display: flex;
+  /* 将元素靠边对齐 */
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 100px;
+  z-index: 1;
+  /* 动画过渡 */
+  transition: 0.6s;
+}
+header .logo{
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li{
+  list-style: none;
+  position: relative;
+}
+header ul li a{
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.6s;
+}
+header ul li a:hover::after{
+  position: absolute;
+  content: '';
+  width: 75%;
+  height: 5px;
+  background-color: aqua;
+  bottom: -20px;
+  left: 13%;
+  transition: all 0.5s;
+}
+.banner1{
+  /* 相对定位 */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/car1.jpg") no-repeat;
+  /* 保持原有尺寸比例，裁切长边 */
+  background-size: cover;
+  /* 图片定位正中间 */
+  background-position: center center;
+}
+.banner2{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/car2.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+header.sticky{
+  padding: 6px 100px;
+  background-color: #fff;
+}
+header.sticky .logo,
+header.sticky ul li a{
+  color: #000;
+}
